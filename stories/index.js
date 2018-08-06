@@ -1,11 +1,13 @@
 import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions';
+import { withNotes } from '@storybook/addon-notes';
 import Button from '../components/atoms/Button.vue'
 
 storiesOf('Button', module)
-  .add('default', () => ({
+  .add('default', withNotes('button regular')( () => ({
     components: { Button },
-    template: `<Button text="default" />`
-  }))
+    template: `<Button text="default" click="action('hoge')" />`
+  })))
   .add('color', () => ({
     components: { Button },
     template: `

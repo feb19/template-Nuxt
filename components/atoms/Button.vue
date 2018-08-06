@@ -1,11 +1,11 @@
 <template>
   <button
-    @click="handleClick"
+    @click="onclick"
     :disabled="disabled||false"
     :class="[
     'button',
     'button-' + (disabled ? 'disabled' : kind),
-    size  ? 'button-'+size : 'button-normal'
+    size ? 'button-'+size : 'button-normal'
     ]"
   >
     <span>{{ text }}</span>
@@ -31,6 +31,7 @@ export default {
   },
   methods: {
     onclick (e) {
+      console.log('hoge')
       this.$emit('click', e)
     }
   }

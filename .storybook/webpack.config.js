@@ -38,7 +38,7 @@ module.exports = (storybookBaseConfig) => {
   }
 
   storybookBaseConfig.module.rules.push({
-    test: /\.story\.js$/,
+    test: /..\/stories\/\.js$/,
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
     enforce: 'pre',
   })
